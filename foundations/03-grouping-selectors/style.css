@@ -1,0 +1,13 @@
+.clickone{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.clicktwo{
+    background-color: #ffff00;
+}
+
+.clickone, .clicktwo{
+    font-size: 28px;
+    font-family: 'Helvetica', 'Times New Roman', sans-serif;
+}
