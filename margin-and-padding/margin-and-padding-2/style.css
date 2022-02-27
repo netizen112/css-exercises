@@ -6,34 +6,42 @@ body {
 .card {
   width: 400px;
   background: #fff;
-  margin: 16px auto;
+  margin: 16px auto; /*When 2 values are specified, the first is for top and bottom, second is for right and left*/
   padding: 8px;
 }
+
+/*Initially I had set all 4 margins. But after looking at the solution and reading the instructions again,
+I realise that the instructions say there only has to be 8px between the edge of hte card and its content
+which is accomplished by the padding on the div with the .card class. Thus if any more margin was to be
+added to the content, it would increase the gap*/
 
 .title {
   background: #e3f4ff;
   font-size: 16px;
   padding: 8px;
-  margin: 8px;
+  margin-top: 0px; /*This line is taken from solution. Without it the title shifts downwards. Why?*/
+  margin-bottom: 8px;
 }
 
 .content {
   background: #e3f4ff;
   padding: 16px 8px 16px 8px;
-  margin: 8px;
+  margin-bottom: 8px;
 }
 
 .button-container {
   background: #e3f4ff;
   text-align: center;
   padding: 8px;
-  margin: 8px;
+  /*margin: 8px; This attribute should be removed, as we only need a margin-top of 8px, but this is
+  already accomplished by the margin-bottom of the above element and thus adding a margin here would only
+  lead to margin collapsing*/
 }
 
 button {
   background: white;
   border: 1px solid #eee;
   display: block;
-  margin: auto;
-  padding: 8px 24px 8px 24px;
+  margin: 0 auto;
+  padding: 8px 24px 8px 24px; /*this can work by using only 2 values*/
 }
